@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+  </head>
+  <style>
+    .header {
+      margin-top: 4rem;
+      width: 100%;
+      border-bottom: 10px solid black;
+    }
+    .top-header {
+      display: flex;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+      margin: 7rem 0;
+    }
+
+    .condition {
+      width: 50%;
+      font-size: 1.5rem;
+    }
+    .again {
+      width: 10%;
+      margin: 0 0 0 auto;
+    }
+    .q-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+    .question {
+      width: 5rem;
+      height: 5rem;
+      background-color: black;
+      margin: -3rem auto;
+      color: aliceblue;
+      font-size: 4rem;
+      border-radius: 40px;
+      text-align: center;
+    }
+    .input {
+      width: 100%;
+      display: flex;
+      margin: 8rem auto 0 auto;
+      text-align: center;
+    }
+    .left-box {
+      width: 50%;
+      margin: auto;
+    }
+    .right-box {
+      width: 50%;
+      margin: auto;
+    }
+    .inputNum {
+      height: 4rem;
+      width: 20rem;
+      font-size: 2rem;
+      border-radius: 5rem;
+      text-align: center;
+    }
+    .check {
+      margin-left: 2rem;
+      padding: 0.6rem 2rem;
+      border-radius: 3rem;
+      border-color: darkblue;
+      color: rgb(101, 29, 129);
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <div>
+      <div class="header">
+        <div class="top-header">
+          <h1 class="condition">(Between 1 and 10)</h1>
+          <button class="again" value="Again!" onclick="resetGame()">
+            Reset Game!
+          </button>
+        </div>
+        <h1 class="title">Guess My Number</h1>
+      </div>
+      <div class="q-wrapper">
+        <div class="question">?</div>
+      </div>
+      <div class="input">
+        <div class="left-box">
+          <input class="inputNum" type="number" />
+          <button class="check" onclick="checkNum()">check !</button>
+        </div>
+        <div class="right-box">
+          <h3 class="startGuess">start guessting . . .</h3>
+          <h3>Score: <span class="score"></span></h3>
+          <h3>All Score: <span class="highScore"></span></h3>
+        </div>
+      </div>
+    </div>
+    <script src="test.js"></script>
+  </body>
+</html>
